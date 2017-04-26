@@ -10,3 +10,4 @@ export default {
 }
 </script>
 
+<style src="@sass/style.scss" lang="sass"></style>
