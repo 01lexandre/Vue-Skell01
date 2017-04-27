@@ -1,16 +1,28 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div id="app" class="wrapper">
+    <Sidebar></Sidebar>
+    <div class="main-panel">
+      <Navbar></Navbar>
+      <div class="content">
+        <div class="container-fluid">
+          <router-view></router-view>
+        </div>
+      </div>
+
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import Sidebar from './partials/Sidebar.vue'
+  import Navbar from './partials/Navbar.vue'
+  export default {
+    name: 'app',
+    components: {
+      Sidebar,
+      Navbar
+    }
+  }
 </script>
 
-<style src="@sass/style.scss" lang="sass">
-  @import 'http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css';
-  @import 'http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons';
-</style>
+<style src="@sass/style.scss" lang="sass"></style>
